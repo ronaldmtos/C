@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    // DECLARAÇÃO DO VETOR DE 12 POSIÇÕES E VARIÁVEIS
+    int vetor[12];
+    int i, valor, contador = 0; // 'I' PARA ITERAÇÃO, 'VALOR' É O NÚMERO A SER BUSCADO, 'CONTADOR' CONTA AS ITERAÇÕES
+    int encontrado = 0; // FLAG PARA VERIFICAR SE O VALOR FOI ENCONTRADO (0 = NÃO, 1 = SIM)
+
+    // LOOP PARA PREENCHER O VETOR COM VALORES FORNECIDOS PELO USUÁRIO
+    for (i = 0; i < 12; i++) {
+        printf("Digite o valor para a posição %d: ", i); // SOLICITA O VALOR PARA CADA POSIÇÃO
+        scanf("%d", &vetor[i]); // LÊ O VALOR INSERIDO E ARMAZENA NO VETOR
+    }
+
+    // SOLICITA O VALOR QUE SERÁ BUSCADO NO VETOR
+    printf("Digite o valor que deseja buscar: ");
+    scanf("%d", &valor); // LÊ O VALOR QUE O USUÁRIO DESEJA ENCONTRAR
+
+    // BUSCA LINEAR NO VETOR
+    for (i = 0; i < 12; i++) { // PERCORRE O VETOR DE POSIÇÃO 0 ATÉ 11
+        contador++; // INCREMENTA O CONTADOR A CADA ITERAÇÃO
+        if (vetor[i] == valor) { // VERIFICA SE O VALOR ATUAL É IGUAL AO VALOR BUSCADO
+            printf("Valor encontrado na posição %d\n", i); // INFORMA A POSIÇÃO DO VALOR ENCONTRADO
+            encontrado = 1; // MARCA QUE O VALOR FOI ENCONTRADO
+            break; // INTERROMPE O LAÇO POIS O VALOR JÁ FOI ENCONTRADO
+        }
+    }
+
+    // VERIFICA SE O VALOR NÃO FOI ENCONTRADO
+    if (!encontrado) { // SE 'ENCONTRADO' CONTINUAR 0, O VALOR NÃO ESTÁ NO VETOR
+        printf("Valor não encontrado\n");
+    }
+
+    // IMPRIME O TOTAL DE REPETIÇÕES REALIZADAS NA BUSCA
+    printf("Total de repetições na pesquisa: %d\n", contador);
+    
+    // IMPRIME TODOS OS VALORES ARMAZENADOS NO VETOR
+    printf("Valores armazenados no vetor: ");
+    for (i = 0; i < 12; i++) { // PERCORRE TODO O VETOR
+        printf("%d ", vetor[i]); // IMPRIME O VALOR DA POSIÇÃO ATUAL
+    }
+    printf("\n"); // QUEBRA DE LINHA PARA FINALIZAR A IMPRESSÃO
+
+    return 0; // FINALIZA O PROGRAMA COM SUCESSO
+}
