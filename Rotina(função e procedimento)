@@ -1,6 +1,5 @@
 Uma função retorna um valor após executar seu processamento.
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 // FUNÇÃO QUE CALCULA O DOBRO DE UM NÚMERO
 int dobro(int numero) {
@@ -9,21 +8,22 @@ int dobro(int numero) {
 
 int main() {
     int valor = 5;
-    cout << "O dobro de " << valor << " é " << dobro(valor) << endl; // CHAMA A FUNÇÃO
+    printf("O dobro de %d é %d\n", valor, dobro(valor)); // CHAMA A FUNÇÃO
     return 0;
 }
 
 
+
 Um procedimento não retorna valor, apenas executa uma tarefa.
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 // PROCEDIMENTO QUE IMPRIME UMA MENSAGEM
 void mostrarMensagem() {
-    cout << "Bem-vindo ao programa!" << endl;
+    printf("Bem-vindo ao programa!\n");
 }
 
 int main() {
     mostrarMensagem(); // CHAMA O PROCEDIMENTO
     return 0;
 }
+
