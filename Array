@@ -1,0 +1,26 @@
+# include <stdio.h>              // BIBLIOTECA PARA AS FUNÇÕES printf E scanf
+
+int main (){                     
+  int i;                         // VARIÁVEL DE CONTROLE DO LAÇO for
+  float media, soma = 0,         // VARIÁVEIS PARA GUARDAR A MÉDIA E A SOMA DAS NOTAS
+        nota[3];                 // VETOR nota COM 3 POSIÇÕES (0 A 2)
+
+  printf("Entrada de dados:\n"); // EXIBE UMA MENSAGEM PARA ENTRADA DE DADOS
+
+  for (i = 0; i < 3; i++){       // LAÇO PARA PREENCHER AS NOTAS DO VETOR
+    printf("Nota do aluno: ");   // SOLICITA A NOTA DO ALUNO
+    scanf("%f", &nota[i]);       // LÊ A NOTA E ARMAZENA NA POSIÇÃO i DO VETOR nota
+    soma += nota[i];             // ACUMULA A SOMA DAS NOTAS (soma = soma + nota[i])
+  }
+
+  media = soma / 3;              // CALCULA A MÉDIA DIVIDINDO A soma PELO NÚMERO DE NOTAS
+
+  printf ("\nMedia da turma: %.2f\n", media); // EXIBE A MÉDIA DA TURMA COM DUAS CASAS DECIMAIS
+  printf ("\nNumero - Nota do aluno");        // EXIBE O CABEÇALHO PARA A LISTA DE NOTAS
+
+  for (i = 0; i < 3; i++) {      // LAÇO PARA IMPRIMIR CADA NOTA ARMAZENADA NO VETOR nota
+    printf ("\n%.1f", nota[i]);  // EXIBE A NOTA DO ALUNO COM UMA CASA DECIMAL
+  }
+
+  return 0;                      // FINALIZA O PROGRAMA COM SUCESSO
+}
