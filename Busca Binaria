@@ -1,0 +1,16 @@
+No main, crie um vetor para armazenar estes valores ordenados:
+-8, -5, 1, 4, 14, 21, 23, 54, 67, 90
+Leia o valor da pesquisa
+Implemente a busca binária sem função. O objetivo é verificar se o
+valor da pesquisa está no vetor.
+Lógica da implementação:
+Se o elemento buscado for menor:
+A nova posição (índice) final do array será a posição do meio menos um.
+Se o elemento buscado for maior:
+A nova posição (índice) inicial do array será a posição do meio mais um.
+Se o elemento buscado for igual ao elemento do vetor:
+O valor foi encontrado e a pesquisa finaliza.
+No final, mostre uma das mensagens:
+"Valor não encontrado na pesquisa"
+"Valor encontrado na posição x"
+Mostre todos os valores do vetor com os dados ordenados
